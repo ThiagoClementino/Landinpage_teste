@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/script.js" defer></script>
+    <script src="js/carousel.js" defer></script>
     <link rel="stylesheet" href="css/estilo.css" />
     <title>Document</title>
   </head>
@@ -341,73 +342,116 @@
             </p>
             <p>
               Cartões, crédito, investimentos, seguros, consórcios e muitas
-              outras soluções, com benefícios que cooperam com o seu dia a dia. 
+              outras soluções, com benefícios que cooperam com o seu dia a dia.
             </p>
           </div>
 
-          <div class="cards">
-            <img src="assets/img/Placeholder Image.png" alt="" />
-            <div class="textCards">
-              <p>Conta PJ e MEI</p>
-              <p>
-                Uma conta com benefícios para você e sua empresa. E ser
-                cooperado é um deles.
-              </p>
-            </div>
-            <div class="buttonCard">
-              <p>Abra sua Conta</p>
-            </div>
-          </div>
+          <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M15 18L9 12L15 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
 
-          <div class="cards">
-            <img src="assets/img/cardimage2.jpg" alt="" />
-            <div class="textCards">
-              <p>Conta PF</p>
-              <p>
-                Receba e envie dinheiro, contrate produtos e serviços e conte
-                com um super app no seu dia a dia.
-              </p>
-            </div>
-            <div class="buttonCard">
-              <p>Abra sua Conta</p>
-            </div>
-          </div>
-          <div class="cards">
-            <img src="assets/img/cardimage3.png" alt="" />
-            <div class="textCards">
-              <p>2ª Via de Boleto</p>
-              <p>
-                Precisa emitir a 2ª via do seu boleto? É simples e muito
-                prático.
-              </p>
-            </div>
-            <div class="buttonCard">
-              <p>Abra sua Conta</p>
-            </div>
-          </div>
-          <div class="cards">
-            <img src="assets/img/cardimage4.png" alt="" />
-            <div class="textCards">
-              <p>Conta PJ</p>
+              <div class="carousel-track-container">
+                <div class="carousel-track" id="carouselTrack">
+                  <div class="cards carousel-slide active">
+                    <img src="assets/img/Placeholder Image.png" alt="" />
+                    <div class="textCards">
+                      <p>Conta PJ e MEI</p>
+                      <p>
+                        Uma conta com benefícios para você e sua empresa. E ser
+                        cooperado é um deles.
+                      </p>
+                    </div>
+                    <div class="buttonCard">
+                      <p>Abra sua Conta</p>
+                    </div>
+                  </div>
 
-              <p>
-                Uma conta com benefícios para você e sua empresa. E ser
-                cooperado é um deles.
-              </p>
-            </div>
-            <div class="buttonCard">
-              <p>Abra sua Conta</p>
-            </div>
-          </div>
+                  <div class="cards carousel-slide">
+                    <img src="assets/img/cardimage2.jpg" alt="" />
+                    <div class="textCards">
+                      <p>Conta PF</p>
+                      <p>
+                        Receba e envie dinheiro, contrate produtos e serviços e
+                        conte com um super app no seu dia a dia.
+                      </p>
+                    </div>
+                    <div class="buttonCard">
+                      <p>Abra sua Conta</p>
+                    </div>
+                  </div>
 
-          <div class="cards">
-            <img src="assets/img/cardimage5.png" alt="" />
-            <div class="textCards">
-              <p>Conta para Crianças e Adolescentes</p>
-              <p>Tem filhos? Abra uma conta para eles pelo App Sicoob</p>
+                  <div class="cards carousel-slide">
+                    <img src="assets/img/cardimage3.png" alt="" />
+                    <div class="textCards">
+                      <p>2ª Via de Boleto</p>
+                      <p>
+                        Precisa emitir a 2ª via do seu boleto? É simples e muito
+                        prático.
+                      </p>
+                    </div>
+                    <div class="buttonCard">
+                      <p>Abra sua Conta</p>
+                    </div>
+                  </div>
+
+                  <div class="cards carousel-slide">
+                    <img src="assets/img/cardimage4.png" alt="" />
+                    <div class="textCards">
+                      <p>Conta PJ</p>
+                      <p>
+                        Uma conta com benefícios para você e sua empresa. E ser
+                        cooperado é um deles.
+                      </p>
+                    </div>
+                    <div class="buttonCard">
+                      <p>Abra sua Conta</p>
+                    </div>
+                  </div>
+
+                  <div class="cards carousel-slide">
+                    <img src="assets/img/cardimage5.png" alt="" />
+                    <div class="textCards">
+                      <p>Conta para Crianças e Adolescentes</p>
+                      <p>
+                        Tem filhos? Abra uma conta para eles pelo App Sicoob
+                      </p>
+                    </div>
+                    <div class="buttonCard">
+                      <p>Abra sua Conta</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-btn carousel-btn-next" id="nextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
-            <div class="buttonCard">
-              <p>Abra sua Conta</p>
+
+            <div class="carousel-indicators" id="carouselIndicators">
+              <button class="indicator active" data-slide="0">1</button>
+              <button class="indicator" data-slide="1">2</button>
+              <button class="indicator" data-slide="2">3</button>
+              <button class="indicator" data-slide="3">4</button>
+              <button class="indicator" data-slide="4">5</button>
             </div>
           </div>
         </div>
@@ -686,7 +730,7 @@
               <div class="faq-item__content">
                 <p>
                   Pessoa Física: RDC, LCA, LCI, LF e Fundos de Investimentos
-                  Sicoob.  Pessoa Jurídica: RDC, LF e os Fundos de Investimentos
+                  Sicoob. Pessoa Jurídica: RDC, LF e os Fundos de Investimentos
                   Sicoob, a relação está descrita no item 2.2.1 do regulamento.
                 </p>
               </div>
