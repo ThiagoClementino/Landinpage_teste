@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/script.js" defer></script>
     <script src="js/carousel.js" defer></script>
+    <script src="js/cardsCarroussel.js" defer></script>
     <link rel="stylesheet" href="css/estilo.css" />
     <title>Document</title>
   </head>
@@ -512,112 +513,156 @@
             </p>
             <div class="textCarroussel"></div>
           </div>
-          <div class="cardsCarroussel">
-            <div class="cardCarroussel">
-              <div class="card-body">
-                <div class="card-titulo">
-                  <div class="numberCard">
-                    <p>1.</p>
-                  </div>
-                  <div class="textCard">
-                    <p>Adesão livre e voluntária</p>
+          <div class="cardsCarrousselWrapper">
+            <button
+              class="cardsCarrousselBtn cardsCarrousselPrev"
+              id="cardsCarrousselPrevBtn"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="cardsCarrousselContainer">
+              <div class="cardsCarroussel">
+                <div class="cardCarroussel">
+                  <div class="card-body">
+                    <div class="card-titulo">
+                      <div class="numberCard">
+                        <p>1.</p>
+                      </div>
+                      <div class="textCard">
+                        <p>Adesão livre e voluntária</p>
+                      </div>
+                    </div>
+                    <div class="contentCard">
+                      <p>Um modelo único para todos.</p>
+                    </div>
                   </div>
                 </div>
-                <div class="contentCard">
-                  <p>Um modelo único para todos.</p>
+                <div class="cardCarroussel">
+                  <div class="card-body">
+                    <div class="card-titulo">
+                      <div class="numberCard">
+                        <p>2.</p>
+                      </div>
+                      <div class="textCard">
+                        <p>Gestão democrática</p>
+                      </div>
+                    </div>
+                    <div class="contentCard">
+                      <p>Todos os associados têm os mesmos poderes.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardCarroussel">
+                  <div class="card-body">
+                    <div class="card-titulo">
+                      <div class="numberCard">
+                        <p>3.</p>
+                      </div>
+                      <div class="textCard">
+                        <p>Participação econômica dos membros</p>
+                      </div>
+                    </div>
+                    <div class="contentCard">
+                      <p>Todos são donos da cooperativa.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardCarroussel">
+                  <div class="card-body">
+                    <div class="card-titulo">
+                      <div class="numberCard">
+                        <p>4.</p>
+                      </div>
+                      <div class="textCard">
+                        <p>Autonomia e independência</p>
+                      </div>
+                    </div>
+                    <div class="contentCard">
+                      <p>Todos são donos da cooperativa.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardCarroussel">
+                  <div class="card-body">
+                    <div class="card-titulo">
+                      <div class="numberCard">
+                        <p>5.</p>
+                      </div>
+                      <div class="textCard">
+                        <p>Educação, formação e informação</p>
+                      </div>
+                    </div>
+                    <div class="contentCard">
+                      <p>Todos são donos da cooperativa.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardCarroussel">
+                  <div class="card-body">
+                    <div class="card-titulo">
+                      <div class="numberCard">
+                        <p>6.</p>
+                      </div>
+                      <div class="textCard">
+                        <p>Intercooperação</p>
+                      </div>
+                    </div>
+                    <div class="contentCard">
+                      <p>Todos se ajudam em benefício do crescimento.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardCarroussel">
+                  <div class="card-body">
+                    <div class="card-titulo">
+                      <div class="numberCard">
+                        <p>7.</p>
+                      </div>
+                      <div class="textCard">
+                        <p>Interesse pela comunidade</p>
+                      </div>
+                    </div>
+                    <div class="contentCard">
+                      <p>Todos saem ganhando</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="cardCarroussel">
-              <div class="card-body">
-                <div class="card-titulo">
-                  <div class="numberCard">
-                    <p>2.</p>
-                  </div>
-                  <div class="textCard">
-                    <p>Gestão democrática </p>
-                  </div>
-                </div>
-                <div class="contentCard">
-                  <p>Todos os associados têm os mesmos poderes. </p>
-                </div>
-              </div>
-            </div>
-            <div class="cardCarroussel">
-              <div class="card-body">
-                <div class="card-titulo">
-                  <div class="numberCard">
-                    <p>3.</p>
-                  </div>
-                  <div class="textCard">
-                    <p>Participação econômica dos membros</p>
-                  </div>
-                </div>
-                <div class="contentCard">
-                  <p>Todos são donos da cooperativa.</p>
-                </div>
-              </div>
-            </div>
-            <div class="cardCarroussel">
-              <div class="card-body">
-                <div class="card-titulo">
-                  <div class="numberCard">
-                    <p>4.</p>
-                  </div>
-                  <div class="textCard">
-                    <p>Autonomia e independência</p>
-                  </div>
-                </div>
-                <div class="contentCard">
-                  <p>Todos são donos da cooperativa.</p>
-                </div>
-              </div>
-            </div>
-            <div class="cardCarroussel">
-              <div class="card-body">
-                <div class="card-titulo">
-                  <div class="numberCard">
-                    <p>5.</p>
-                  </div>
-                  <div class="textCard">
-                    <p>Educação, formação e informação</p>
-                  </div>
-                </div>
-                <div class="contentCard">
-                  <p>Todos são donos da cooperativa.</p>
-                </div>
-              </div>
-            </div>
-            <div class="cardCarroussel">
-              <div class="card-body">
-                <div class="card-titulo">
-                  <div class="numberCard">
-                    <p>6.</p>
-                  </div>
-                  <div class="textCard">
-                    <p>Intercooperação</p>
-                  </div>
-                </div>
-                <div class="contentCard">
-                  <p>Todos se ajudam em benefício do crescimento. </p>
-                </div>
-              </div>
-            </div>
-            <div class="cardCarroussel">
-              <div class="card-body">
-                <div class="card-titulo">
-                  <div class="numberCard">
-                    <p>7.</p>
-                  </div>
-                  <div class="textCard">
-                    <p>Interesse pela comunidade</p>
-                  </div>
-                </div>
-                <div class="contentCard">
-                  <p>Todos saem ganhando</p>
-                </div>
-              </div>
-            </div>
+            <button
+              class="cardsCarrousselBtn cardsCarrousselNext"
+              id="cardsCarrousselNextBtn"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
           <div class="saibamais">
             <button>Saiba Mais</button>

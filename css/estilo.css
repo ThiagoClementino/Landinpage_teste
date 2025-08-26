@@ -805,7 +805,7 @@ h6 {
     align-items: center;
     gap: var(--spacing-xxs, 24px);
     flex: 1 0 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .cardCarroussel {
     display: flex;
@@ -1271,5 +1271,69 @@ h6 {
 
   .carousel-btn-next {
     right: -20px;
+  }
+}
+
+/* ==========================================================================
+   Carrossel de Cards - Estilos adicionais mantendo propriedades originais
+   ========================================================================== */
+
+.cardsCarrousselWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.cardsCarrousselContainer {
+  fflex: 1;
+  overflow: hidden;
+  margin: 0 var(--spacing-xxxs);
+}
+
+.cardsCarrousselBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--color-cerulean-50);
+  background: var(--color-brand-dusky);
+  color: var(--color-cerulean-50);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.cardsCarrousselBtn:hover {
+  background: var(--color-cerulean-50);
+  color: var(--color-brand-dusky);
+  transform: scale(1.05);
+}
+
+.cardsCarrousselBtn:active {
+  transform: scale(0.95);
+}
+
+.cardsCarrousselBtn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsividade para o carrossel de cards */
+@media (max-width: 1280px) {
+  .cardsCarrousselWrapper {
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+  }
+
+  .cardsCarrousselBtn {
+    display: none;
+  }
+
+  .cardsCarroussel {
+    flex-direction: column;
   }
 }
