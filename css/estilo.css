@@ -1,0 +1,728 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-bs);
+  color: var(--surface-text-medium);
+  background-color: var(--surface-bg-low);
+  line-height: var(--line-height-distant);
+}
+@font-face {
+  font-family: "Sicoob Sans";
+  src: url("../assets/fonts/SicoobSans/SicoobSans-Regular.woff") format("woff"),
+    url("../assets/fonts/SicoobSans/SicoobSans-Black.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-highlight);
+  color: var(--surface-text-high);
+  font-weight: var(--font-weight-bold);
+}
+
+:root {
+  /* 1. Font Family */
+  --font-family-base: "Sicoob Sans", sans-serif;
+  --font-family-destaque: "Sicoob Script", cursive;
+
+  /* 2. Font Size (Mobile - como base) */
+  --font-size-xs: 11.6px;
+  --font-size-sm: 13px;
+  --font-size-bs: 16px;
+  --font-size-h6: 19px;
+  --font-size-h5: 23px;
+  --font-size-h4: 27px;
+  --font-size-h3: 32px;
+  --font-size-h2: 37px;
+  --font-size-h1: 45px;
+  --font-size-lg: 52px;
+  --font-size-xl: 60px;
+
+  /* Font Size (Desktop - para referência em media queries) */
+  --font-size-desktop-xs: 13px;
+  --font-size-desktop-sm: 15px;
+  --font-size-desktop-bs: 18px;
+  --font-size-desktop-h6: 22px;
+  --font-size-desktop-h5: 27px;
+  --font-size-desktop-h4: 33px;
+  --font-size-desktop-h3: 40px;
+  --font-size-desktop-h2: 50px;
+  --font-size-desktop-h1: 60px;
+  --font-size-desktop-lg: 75px;
+  --font-size-desktop-xl: 90px;
+
+  /* 3. Font Weight */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+  --font-weight-extra-black: 950;
+
+  /* 4. Line Height */
+  --line-height-tight: 100%;
+  --line-height-medium: 120%;
+  --line-height-distant: 150%;
+  --line-height-super-distant: 200%;
+
+  /* 5. Spacing */
+  --spacing-none: 0px;
+  --spacing-quarck: 4px;
+  --spacing-nano: 8px;
+  --spacing-xxxs: 16px;
+  --spacing-xxs: 24px;
+  --spacing-xs: 32px;
+  --spacing-sm: 40px;
+  --spacing-md: 48px;
+  --spacing-lg: 56px;
+  --spacing-xl: 64px;
+  --spacing-xxl: 80px;
+  --spacing-xxxl: 120px;
+  --spacing-huge: 160px;
+  --spacing-giant: 200px;
+
+  /* 6. Border Width */
+  --border-width-none: 0px;
+  --border-width-hardline: 1px;
+  --border-width-thin: 2px;
+  --border-width-thick: 4px;
+  --border-width-heavy: 8px;
+
+  /* 7. Border Radius */
+  --border-radius-none: 0px;
+  --border-radius-xs: 4px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 48px;
+  --border-radius-circular: 9999px;
+
+  /* 8. Opacity */
+  --opacity-transparent: 0;
+  --opacity-semi-transparent: 0.08;
+  --opacity-light: 0.16;
+  --opacity-intense: 0.64;
+  --opacity-semi-opaque: 0.8;
+  --opacity-opaque: 1;
+
+  /* 9. Box Shadow */
+  --box-shadow-none: 0 0 0 0 rgba(128, 128, 128, 0.2);
+  --box-shadow-xs: 0 2px 4px 0 rgba(128, 128, 128, 0.2);
+  --box-shadow-sm: 0 4px 8px 0 rgba(128, 128, 128, 0.2);
+  --box-shadow-md: 0 8px 16px 0 rgba(128, 128, 128, 0.2);
+  --box-shadow-lg: 0 16px 24px 0 rgba(128, 128, 128, 0.2);
+
+  /* 10. Colors - Paleta Foundation */
+  /* Persian Green */
+  --color-persian-green-50: #effefb;
+  --color-persian-green-100: #c7fff4;
+  --color-persian-green-200: #90ffe8;
+  --color-persian-green-300: #51f7dc;
+  --color-persian-green-400: #1de4c9;
+  --color-persian-green-500: #04c8b0;
+  --color-persian-green-600: #00ae9d;
+  --color-persian-green-700: #03857f;
+  --color-persian-green-800: #0a655e;
+  --color-persian-green-900: #0d544e;
+  --color-persian-green-950: #003332;
+
+  /* Lima */
+  --color-lima-50: #f8fde8;
+  --color-lima-100: #ecfacd;
+  --color-lima-200: #daf5a1;
+  --color-lima-300: #bfec6a;
+  --color-lima-400: #a5de3d;
+  --color-lima-500: #7db61c;
+  --color-lima-600: #679c14;
+  --color-lima-700: #4f7714;
+  --color-lima-800: #415e16;
+  --color-lima-900: #375017;
+  --color-lima-950: #1b2c07;
+
+  /* Rio Grande */
+  --color-rio-grande-50: #f8fee8;
+  --color-rio-grande-100: #eeffc2;
+  --color-rio-grande-200: #e0ff88;
+  --color-rio-grande-300: #d6ff43;
+  --color-rio-grande-400: #d8ff10;
+  --color-rio-grande-500: #d3ef03;
+  --color-rio-grande-600: #c9d200;
+  --color-rio-grande-700: #aeb50e;
+  --color-rio-grande-800: #929619;
+  --color-rio-grande-900: #646720;
+  --color-rio-grande-950: #323818;
+
+  /* Victoria */
+  --color-victoria-50: #f3f5fb;
+  --color-victoria-100: #e4e6f5;
+  --color-victoria-200: #cfd4ee;
+  --color-victoria-300: #aeb8e2;
+  --color-victoria-400: #8793d3;
+  --color-victoria-500: #6a72c7;
+  --color-victoria-600: #575ab9;
+  --color-victoria-700: #49479d;
+  --color-victoria-800: #47438a;
+  --color-victoria-900: #3a396f;
+  --color-victoria-950: #282645;
+
+  /* Cyprus */
+  --color-cyprus-50: #e6f7fa;
+  --color-cyprus-100: #b3e5f0;
+  --color-cyprus-200: #80d3e6;
+  --color-cyprus-300: #4dc1dc;
+  --color-cyprus-400: #1ab0d1;
+  --color-cyprus-500: #009dbd;
+  --color-cyprus-600: #008ca8;
+  --color-cyprus-700: #006f85;
+  --color-cyprus-800: #003641;
+  --color-cyprus-900: #002a33;
+  --color-cyprus-950: #001e24;
+
+  /* Sunshade */
+  --color-sunshade-50: #fff9eb;
+  --color-sunshade-100: #ffedc6;
+  --color-sunshade-200: #ffd888;
+  --color-sunshade-300: #ffbf4a;
+  --color-sunshade-400: #ffaa2c;
+  --color-sunshade-500: #f98107;
+  --color-sunshade-600: #dd5c02;
+  --color-sunshade-700: #b73006;
+  --color-sunshade-800: #942e0c;
+  --color-sunshade-900: #7a2700;
+  --color-sunshade-950: #461202;
+
+  /* Violet Red */
+  --color-violet-red-50: #fff1f3;
+  --color-violet-red-100: #ffe4e8;
+  --color-violet-red-200: #ffccd6;
+  --color-violet-red-300: #fea3b4;
+  --color-violet-red-400: #fd6f8d;
+  --color-violet-red-500: #f7406c;
+  --color-violet-red-600: #e41a54;
+  --color-violet-red-700: #c10f47;
+  --color-violet-red-800: #a11042;
+  --color-violet-red-900: #8a113e;
+  --color-violet-red-950: #4d041e;
+
+  /* Cerulean */
+  --color-cerulean-50: #f0f9ff;
+  --color-cerulean-100: #e0f1fe;
+  --color-cerulean-200: #b9e5fe;
+  --color-cerulean-300: #7cd1fd;
+  --color-cerulean-400: #36bbfa;
+  --color-cerulean-500: #0ca2eb;
+  --color-cerulean-600: #0090e0;
+  --color-cerulean-700: #0166a3;
+  --color-cerulean-800: #065786;
+  --color-cerulean-900: #08486f;
+  --color-cerulean-950: #072e4a;
+
+  /* Athens Gray */
+  --color-athens-gray-50: #f6f7f9;
+  --color-athens-gray-100: #ebedf1;
+  --color-athens-gray-200: #d5dae2;
+  --color-athens-gray-300: #b1bbc8;
+  --color-athens-gray-400: #8695aa;
+  --color-athens-gray-500: #677890;
+  --color-athens-gray-600: #526077;
+  --color-athens-gray-700: #434e61;
+  --color-athens-gray-800: #344452;
+  --color-athens-gray-900: #343446;
+  --color-athens-gray-950: #22272f;
+
+  /* Mine Shaft */
+  --color-mine-shaft-50: #ffffff;
+  --color-mine-shaft-100: #f0f0f0;
+  --color-mine-shaft-200: #c8c8c8;
+  --color-mine-shaft-300: #a4a4a4;
+  --color-mine-shaft-400: #818181;
+  --color-mine-shaft-500: #666666;
+  --color-mine-shaft-600: #515151;
+  --color-mine-shaft-700: #434343;
+  --color-mine-shaft-800: #383838;
+  --color-mine-shaft-900: #313131;
+  --color-mine-shaft-950: #1a1a1a;
+
+  /* 11. Colors - Semânticas (Brand) */
+  --color-brand-main: var(--color-persian-green-600);
+  --color-brand-opposite: var(--color-victoria-700);
+  --color-brand-complementary: var(--color-lima-700);
+  --color-brand-supplementary: var(--color-rio-grande-600);
+  --color-brand-dusky: var(--color-cyprus-800);
+
+  /* 12. Colors - Semânticas (Denotative) */
+  --color-denotative-success-darkest: var(--color-lima-800);
+  --color-denotative-success-action: var(--color-lima-700);
+  --color-denotative-success-default: var(--color-lima-500);
+  --color-denotative-success-active: var(--color-lima-200);
+  --color-denotative-success-lightest: var(--color-lima-50);
+
+  --color-denotative-info-darkest: var(--color-cerulean-800);
+  --color-denotative-info-action: var(--color-cerulean-700);
+  --color-denotative-info-default: var(--color-cerulean-600);
+  --color-denotative-info-active: var(--color-cerulean-200);
+  --color-denotative-info-lightest: var(--color-cerulean-50);
+
+  --color-denotative-warning-darkest: var(--color-sunshade-800);
+  --color-denotative-warning-action: var(--color-sunshade-700);
+  --color-denotative-warning-default: var(--color-sunshade-400);
+  --color-denotative-warning-active: var(--color-sunshade-200);
+  --color-denotative-warning-lightest: var(--color-sunshade-50);
+
+  --color-denotative-error-darkest: var(--color-violet-red-800);
+  --color-denotative-error-action: var(--color-violet-red-700);
+  --color-denotative-error-default: var(--color-violet-red-500);
+  --color-denotative-error-active: var(--color-violet-red-200);
+  --color-denotative-error-lightest: var(--color-violet-red-50);
+
+  /* 13. Colors - Semânticas (Function) */
+  --color-function-primary-darkest: var(--color-persian-green-800);
+  --color-function-primary-action: var(--color-persian-green-700);
+  --color-function-primary-default: var(--color-persian-green-600);
+  --color-function-primary-active: var(--color-persian-green-500);
+  --color-function-primary-lightest: var(--color-persian-green-50);
+
+  --color-function-secondary-darkest: var(--color-victoria-800);
+  --color-function-secondary-action: var(--color-victoria-700);
+  --color-function-secondary-default: var(--color-victoria-600);
+  --color-function-secondary-active: var(--color-victoria-500);
+  --color-function-secondary-lightest: var(--color-victoria-50);
+
+  --color-function-tertiary-darkest: var(--color-cyprus-950);
+  --color-function-tertiary-action: var(--color-cyprus-700);
+  --color-function-tertiary-default: var(--color-cyprus-900);
+  --color-function-tertiary-active: var(--color-persian-green-500);
+  --color-function-tertiary-lightest: var(--color-persian-green-400);
+
+  --color-function-disabled-background: var(--color-mine-shaft-100);
+  --color-function-disabled-text: var(--color-mine-shaft-400);
+  --color-function-disabled-border: var(--color-mine-shaft-300);
+
+  /* 14. Colors - Semânticas (Surface) */
+  --color-surface-text-default-low: var(--color-mine-shaft-400);
+  --color-surface-text-default-medium: var(--color-mine-shaft-600);
+  --color-surface-text-default-high: var(--color-cyprus-900);
+
+  --color-surface-text-highlight-low: var(--color-athens-gray-50);
+  --color-surface-text-highlight-medium: var(--color-cyprus-600);
+  --color-surface-text-highlight-high: var(--color-persian-green-600);
+
+  --color-surface-background-low: var(--color-mine-shaft-50);
+  --color-surface-background-medium: var(--color-athens-gray-100);
+  --color-surface-background-high: var(--color-cyprus-900);
+
+  --color-surface-stroke-low: var(--color-mine-shaft-100);
+  --color-surface-stroke-medium: var(--color-athens-gray-200);
+  --color-surface-stroke-high: var(--color-cyprus-300);
+}
+
+/* ==========================================================================
+   3. Responsive Font Sizes
+   ========================================================================== */
+
+/* Telas maiores que 992px (Desktop) */
+@media (min-width: 992px) {
+  :root {
+    --font-size-xs: 13px;
+    --font-size-sm: 15px;
+    --font-size-bs: 18px;
+    --font-size-6: 22px;
+    --font-size-5: 27px;
+    --font-size-4: 33px;
+    --font-size-3: 40px;
+    --font-size-2: 50px;
+    --font-size-1: 60px;
+    --font-size-lg: 75px;
+    --font-size-xl: 90px;
+  }
+}
+
+/* ==========================================================================
+   4. Layout & Container
+   ========================================================================== */
+
+/* Media queries para o container responsivo */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    min-width: 1920px;
+    height: auto;
+    background: var(--color-brand-main);
+    padding-top: var(--spacing-xs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .barra-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-brand-dusky);
+    box-shadow: var(--box-shadow-sm);
+  }
+  .navegacao {
+    display: flex;
+    max-width: 1248px;
+    align-items: center;
+    gap: var(--Bootstrap-spaces-space-3, 16px);
+    align-self: stretch;
+  }
+  .logo {
+    display: flex;
+    width: 187px;
+    height: 80px;
+    padding: 0 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  ._menu-links {
+    display: flex;
+    width: 1044px;
+    height: 80px;
+    padding: 0 16px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs);
+  }
+  ._menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-cerulean-100);
+    gap: 10px;
+  }
+  ._menu-link a {
+    text-decoration: none;
+    color: var(--color-cerulean-100);
+    font-size: var(--font-size-bs);
+    font-weight: var(--font-weight-medium);
+  }
+  .promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 1248px;
+    height: 400px;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
+    background: url("../assets/img/promo.png") no-repeat center;
+    background-size: cover;
+  }
+  .invista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1248px;
+    height: 400px;
+    padding: var(--spacing-xs);
+  }
+  .imginvista {
+    width: 49%;
+    height: 100;
+  }
+  .imginvista img {
+    width: 100%;
+  }
+  .rowconteudo {
+    width: 43%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xxxs);
+  }
+  .conteudoTexto {
+    width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Sicoob Sans";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: var(--line-height-medium);
+    line-height: 120%;
+    color: var(--color-highContrast-50, #fff);
+  }
+  .conteudoTexto p:first-child {
+    font-size: var(--font-size-3);
+    font-style: normal;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-medium); /* 48px */
+    color: var(--color-brand-dusky);
+  }
+  .conteudoTexto p:nth-child(2) {
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-thin);
+    line-height: var(--line-height-medium); /* 60px */
+    color: var(--color-highContrast-50, #fff);
+  }
+  .conteudoTexto p:nth-child(3) {
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-thin);
+    line-height: var(--line-height-medium); /* 60px */
+    color: var(--color-brand-dusky);
+  }
+
+  .alertinvista {
+    width: 5%;
+    height: 100%;
+    padding: var(--spacing-xs);
+  }
+  .alertinvista p {
+    font-size: 0.5rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    text-align: justify;
+    line-height: var(--line-height-medium);
+  }
+
+  /* secaoBase*/
+  .secaoBase {
+    display: flex;
+    width: 1920px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerSecaoBase {
+    width: 1248px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-md, 48px);
+    padding: var(--spacing-xl, 64px) 0;
+  }
+  .rowTitulo p:first-child {
+    color: var(
+      --color-surface-text-highlight-low,
+      var(--color-surface-text-highlight-low, #f6f7f9)
+    );
+    text-align: center;
+
+    /* Font-size/h3/Font size 3 bold */
+    font-family: "Sicoob Sans";
+    font-size: var(--font-size-3, 40px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+    text-align: center;
+  }
+  .rowTitulo p:nth-child(2) {
+    color: var(--color-surface-text-default-high, var(--color-brand-dusky));
+
+    /* Font-size/h3/Font size 3 bold */
+    font-family: "Sicoob Sans";
+    font-size: var(--font-size-3, 40px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  /*Card*/
+  .conteudoCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 24px var(--spacing-xxs, 24px);
+    flex: 1 0 0;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    display: flex;
+    width: 360px;
+    max-width: 360px;
+    padding: var();
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--border-radius-md, 16px);
+    border: 2px solid var(--color-surface-stroke-medium, #d5dae2);
+    background: var(--color-surface-background-low, #fff);
+
+    /* Box shadow/3 */
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-xxs, 24px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xxxs, 16px);
+    align-self: stretch;
+  }
+  .cartaotopo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-nano, 8px);
+    align-self: stretch;
+  }
+  .textoTitulo {
+    color: var(
+      --color-function-primary-action,
+      var(--color-function-primary-action, #00ae9d)
+    );
+
+    /* Font-size/h5/Font size 5 bold */
+    font-family: "Sicoob Sans";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 32.4px */
+  }
+  ._cartao-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-nano, 8px);
+    align-self: stretch;
+  }
+  ._cartao-descricao p {
+    color: var(
+      --color-surface-text-default-high,
+      var(--color-surface-text-default-high, #002a33)
+    );
+
+    font-size: var(--font-size-desktop-bs);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+  .coloricon {
+    color: #003641; /* cor padrão */
+  }
+
+  .cardRotate {
+    display: flex;
+    width: 1920px;
+    height: 704px;
+    padding: var(--Sizes-size-5, 48px) 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-top: 1px solid #00ae9d;
+    border-bottom: 1px solid #00ae9d;
+    background: var(--color-brand-dusky, #003641);
+  }
+  .hero-content {
+    display: flex;
+    width: 1248px;
+    height: 565px;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    flex-shrink: 0;
+  }
+  .hero-main-text {
+    display: flex;
+    width: 50%;
+    height: 566px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var();
+    flex-shrink: 0;
+    color: var(--color-cerulean-100);
+  }
+  .colorhero {
+    color: var(--color-brand-main);
+
+    font-weight: bold; /* Adicionei negrito para dar mais destaque */
+  }
+
+  /* Estilizando o container para se parecer mais com o exemplo (opcional) */
+
+  .hero-main-text p:first-child {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-extra-bold);
+    line-height: var(--line-height-medium);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .cards {
+    display: flex;
+    width: 368px;
+    height: 516px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--spacing-xs);
+    border-radius: 16px;
+    border: 1px solid var(--color-mineShaft-200, #c8c8c8);
+    background: var(--color-mineShaft-50, #fff);
+    text-align: center;
+
+    /* shadow/box-shadow-md */
+    box-shadow: 0 8px 16px 0 rgba(128, 128, 128, 0.2);
+  }
+  .cards p:first-child {
+    font-size: var(--font-size-5, 33px);
+
+    font-weight: 700;
+    line-height: 120%; /* 39.6px */
+    padding: var(--spacing-xs, 24px);
+    color: var(--color-brand-main);
+  }
+  .textcardstwo {
+    width: 100%;
+    height: 100px;
+  }
+  .textCards {
+    width: 304px;
+    height: 190px;
+  }
+  .buttonCard {
+    display: flex;
+    width: 304px;
+    height: 72px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9.918px;
+    flex-shrink: 0;
+    border-radius: var(--border-radius-sm, 8px);
+    border: 0.902px solid var(--brand-main, #00ae9d);
+  }
+  .textcardtwo {
+    font-size: var(--font-size-bs);
+  }
+}
