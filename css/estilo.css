@@ -1201,8 +1201,29 @@ h6 {
 
 .carousel-indicators {
   display: flex;
-  gap: var(--spacing-nano);
-  margin-top: var(--spacing-xxs);
+  flex-direction: row; /* garante horizontalidade */
+  justify-content: center; /* centraliza */
+  align-items: center; /* alinha verticalmente */
+  gap: 0.6rem; /* espaço entre bullets */
+  margin-top: 1rem; /* distância do carrossel */
+}
+
+/* Cada bullet (indicador) */
+.carousel-indicators .indicator {
+  width: 10px; /* tamanho da bolinha */
+  height: 10px;
+  border-radius: 50%; /* deixa redonda */
+  border: none;
+  background-color: #ccc; /* cinza neutro (inativo) */
+  cursor: pointer;
+  transition: all 0.3s ease; /* transição suave */
+  padding: 0; /* remove padding default do button */
+}
+
+/* Bullet ativo (destacado) */
+.carousel-indicators .indicator.active {
+  background-color: #004b35; /* verde principal da paleta */
+  transform: scale(1.2); /* aumenta um pouco o ativo */
 }
 
 .indicator {
@@ -1221,10 +1242,8 @@ h6 {
   justify-content: center;
 }
 
-.indicator.active {
-  background: var(--color-brand-main);
-  color: white;
-  transform: scale(1.1);
+.carousel-indicators .indicator.active {
+  background-color: #004b35; /* verde principal da paleta */
 }
 
 .indicator:hover {
