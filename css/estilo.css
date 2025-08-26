@@ -665,11 +665,7 @@ h6 {
   }
   .colorhero {
     color: var(--color-brand-main);
-
-    font-weight: bold; /* Adicionei negrito para dar mais destaque */
   }
-
-  /* Estilizando o container para se parecer mais com o exemplo (opcional) */
 
   .hero-main-text p:first-child {
     font-size: var(--font-size-3);
@@ -724,5 +720,406 @@ h6 {
   }
   .textcardtwo {
     font-size: var(--font-size-bs);
+  }
+
+  /*compromissoCTA*/
+
+  .compromissoCTA {
+    display: flex;
+    width: 1920px;
+    height: 568px;
+    padding: var(--spacing-xl, 64px) 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg, 56px);
+    flex-shrink: 0;
+    background: var(--color-athens-gray-50, #f6f7f9);
+  }
+  .conteudoCTA {
+    display: flex;
+    width: 1248px;
+    height: 568px;
+  }
+  .logoCTA,
+  .textCTA {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-xs);
+    width: 1248px;
+    height: 568px;
+    flex-direction: column;
+    gap: var(--spacing-lg, 56px);
+  }
+
+  .textCTA p {
+    text-align: left;
+  }
+  .textCTA p:first-child {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-medium); /* 48px */
+    color: var(--color-surface-text-default-high, #002a33);
+  }
+  .textCTA button {
+    width: 248px;
+    height: 56px;
+    background: var(--color-brand-main, #00ae9d);
+    border-radius: var(--border-radius-sm, 8px);
+    border: none;
+    color: var(--color-surface-text-highlight-low, #f6f7f9);
+    font-size: var(--font-size-bs);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+  }
+  .carrousselCars {
+    width: 1920px;
+    height: 568px;
+    background: var(--color-brand-dusky);
+    padding: var(--spacing-xs);
+  }
+  .conteudoCarroussel {
+    display: flex;
+    width: 1248px;
+    height: 568px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-lg, 56px);
+    margin: 0 auto;
+  }
+  .textCarroussel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-cerulean-50);
+  }
+  .textCarroussel p:first-child {
+    text-align: center;
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-bold);
+  }
+  .cardsCarroussel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xxs, 24px);
+    flex: 1 0 0;
+    flex-wrap: wrap;
+  }
+  .cardCarroussel {
+    display: flex;
+    width: 360px;
+    max-width: 360px;
+    height: 220px;
+    padding: var(--spacing-xxxs, 16px) 0;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--border-radius-md, 16px);
+    border: 2px solid var(--color-function-primary-default, #058075);
+    background: var(--color-function-primary-action, #00ae9d);
+  }
+  .card-body {
+    display: flex;
+    padding: var(--spacing-xxs, 24px) 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--spacing-xxxs, 16px);
+    align-self: stretch;
+  }
+
+  .card-titulo {
+    display: flex;
+  }
+  .numberCard {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+    font-size: var(--font-size-desktop-h1);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-cerulean-50);
+  }
+  .textCard {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brand-dusky);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+  .contentCard {
+    width: 100%;
+    padding: 0 var(--spacing-xs);
+  }
+  .saibamais button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: auto;
+    padding: var(--spacing-xxs) 0;
+    background: var(--color-cerulean-50);
+    border-radius: var(--border-radius-sm, 8px);
+    color: var(--color-brand-dusky);
+    font-size: var(--font-size-bs);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    border: none;
+  }
+
+  .sicoobnamidia {
+    width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-athens-gray-50);
+    padding: var(--spacing-sm);
+  }
+  .conteudosicoob {
+    display: flex;
+    width: 1248px;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xxs, 24px);
+    flex-shrink: 0;
+  }
+  .titlesicoob {
+    width: 100%;
+  }
+  .titlesicoob p {
+    font-size: 50px;
+    color: var(--color-brand-main);
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+  }
+  .subtitlesicoob {
+    margin: var(--spacing-lg);
+    width: 1248px;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-5);
+    text-align: center;
+  }
+  .subtitlesicoob p:first-child {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-brand-main);
+  }
+  .fitch {
+    display: flex;
+  }
+  .fitch p:first-child {
+    font-size: var(--font-size-3);
+    line-height: var(--line-height-medium);
+    font-weight: var(--font-weight-bold);
+  }
+  .textfitch {
+    padding: 0 var(--spacing-sm);
+  }
+  .imgfitch {
+    padding: var();
+  }
+  .fitchCTAbutton button {
+    width: 150px;
+    height: 56px;
+    background: var(--color-brand-main, #00ae9d);
+    border-radius: var(--border-radius-sm, 8px);
+    border: none;
+    color: var(--color-surface-text-highlight-low, #f6f7f9);
+    font-size: var(--font-size-bs);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    margin: var(--spacing-xs) 0;
+  }
+  .faq-section-wrapper {
+    width: 1920px;
+    margin: 0 auto; /* Centraliza o wrapper se a tela for maior que 1920px */
+    background-color: var(
+      --color-mine-shaft-50
+    ); /* Fundo branco para a seção */
+    padding: var(--spacing-md) 0;
+    display: flex;
+    justify-content: center; /* Centraliza o container filho horizontalmente */
+  }
+
+  /* 2. Container interno com 1248px, centralizado e em coluna */
+  .faq-section-container {
+    width: 100%;
+    max-width: 1248px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o título */
+    gap: var(--spacing-md);
+  }
+
+  /* Título da Seção */
+  .faq-section__title {
+    font-size: var(--font-size-h3);
+    color: var(--color-cyprus-900);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+  }
+
+  /* Lista que agrupa todos os itens de FAQ */
+  .faq-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaço entre as perguntas */
+  }
+
+  /* Container de cada pergunta individual (tag <details>) */
+  .faq-item {
+    width: 100%;
+    background-color: var(--color-mine-shaft-50);
+    border: 1px solid var(--color-athens-gray-200);
+    border-radius: 8px;
+    transition: background-color 0.2s;
+  }
+
+  /* Estilo para quando o item está aberto */
+  .faq-item[open] {
+    background-color: #fdfdfd;
+  }
+
+  /* Cabeçalho da pergunta (tag <summary>) */
+  .faq-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xxs);
+    cursor: pointer;
+    list-style: none; /* Remove o marcador padrão do <summary> */
+  }
+
+  /* Remove o marcador padrão do <summary> em todos os navegadores */
+  .faq-item__header::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Título da pergunta à esquerda */
+  .faq-item__question-title {
+    font-size: var(--font-size-h6);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-cyprus-900);
+  }
+
+  /* Ícone "+" à direita */
+  .faq-item__icon {
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--color-persian-green-600);
+    transition: transform 0.3s ease;
+  }
+
+  /* Gira o ícone para "x" quando o item está aberto */
+  .faq-item[open] .faq-item__icon {
+    transform: rotate(45deg);
+  }
+
+  /* Container do texto da resposta */
+  .faq-item__content {
+    padding: 0 var(--spacing-xxs) var(--spacing-xxs) var(--spacing-xxs);
+    color: var(--color-cyprus-900);
+    font-size: var(--font-size-bs);
+    line-height: var(--line-height-distant);
+  }
+  .site-footer {
+    background-color: var(--color-brand-dusky); /* Cor de fundo solicitada */
+    color: var(--color-mine-shaft-50); /* Cor do texto branca para contraste */
+    /* Padding apenas em cima e embaixo, como solicitado */
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    width: 1920px;
+  }
+
+  /* Container que alinha o conteúdo e define o layout de 3 colunas */
+  .site-footer__container {
+    max-width: 1248px; /* Largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 var(--spacing-xxs); /* Espaçamento lateral de segurança */
+    display: flex;
+    justify-content: space-between; /* Distribui as colunas */
+    gap: var(--spacing-md); /* Espaço entre as colunas */
+    flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+  }
+
+  /* Estilo base para cada coluna do rodapé */
+  .footer-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1; /* Permite que as colunas cresçam igualmente */
+    min-width: 280px; /* Largura mínima para evitar que fiquem muito espremidas */
+  }
+  .footer-column:nth-child(3) {
+    align-items: flex-end;
+  }
+
+  .footer-column__title {
+    font-size: var(--font-size-bs);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 16px 0; /* Espaçamento abaixo do título */
+    text-transform: uppercase; /* Deixa os títulos em maiúsculo para destaque */
+  }
+
+  .footer-column__title--margin-top {
+    margin-top: var(--spacing-xxs); /* Adiciona espaço acima do título "SAC" */
+  }
+
+  .footer-column p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    line-height: var(--line-height-distant);
+  }
+
+  .footer-column__note {
+    font-size: 12px;
+    opacity: 0.8; /* Deixa a nota um pouco mais sutil */
+  }
+
+  /* Bloco das redes sociais */
+  .social-media-block {
+    display: flex;
+    gap: 16px; /* Espaço entre os ícones */
+    margin-bottom: var(--spacing-sm); /* Espaço abaixo das redes sociais */
+  }
+
+  .social-media-block a {
+    display: inline-block;
+    color: inherit; /* Inherits the color from its parent element */
+    text-decoration: none; /* Removes the default underline */
+    cursor: pointer; /* Ensures the cursor remains a pointer on hover */
+  }
+
+  .social-media-block svg {
+    width: 26px;
+    height: 27px;
+    transition: transform 0.2s ease;
+  }
+  .social-media-block li {
+    list-style-type: none;
+  }
+
+  .social-media-block svg:hover {
+    transform: scale(1.1); /* Efeito de zoom no hover */
+  }
+
+  /* Bloco dos logos */
+  .logo-block {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* Espaço entre os logos */
+  }
+
+  .logo-block img {
+    max-height: 40px; /* Altura máxima para os logos */
+    width: auto;
   }
 }
